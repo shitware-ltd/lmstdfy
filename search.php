@@ -98,7 +98,8 @@
 
     _="
         on load 
-            add .open to #docsContainer
+        add .open to #docsContainer
+        then add .disabled to #docsContainer
         then wait 3s
         then increment @step
         then put @step into #stepCounter
@@ -124,6 +125,7 @@
         then increment @step
         then put @step into #stepCounter
         then put 'Click what you fucking need' into #stepText
+        then remove .disabled from #docsContainer
     "
     class="language-php h-full w-full font-sans text-gray-900 antialiased"
     >
@@ -154,6 +156,8 @@
             padding-top: 75px !important;
         }
     }
+
+    div.disabled { pointer-events: none; }
 </style>
 <div id="docsContainer">
     <a
