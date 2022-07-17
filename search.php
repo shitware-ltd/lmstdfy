@@ -148,6 +148,12 @@
     #thisiswhatasearchbarlookslike.active {
         border:1px solid red;
     }
+
+    @media (max-width: 767px) {
+        #search-overlay {
+            padding-top: 75px !important;
+        }
+    }
 </style>
 <div id="docsContainer">
     <a
@@ -648,6 +654,7 @@
         x-transition
         @click="close()"
         class="relative min-h-screen flex items-start justify-center p-4 lg:py-20"
+        id="search-overlay"
     >
         <div
             @click.stop
