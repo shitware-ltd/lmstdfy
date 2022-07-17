@@ -28,6 +28,10 @@
 
             <div id="output" style="display:none;" class="mt-4 bold text-white text-center">LMSTDFY link copied to your clipboard!</div>
         </form>
+
+        <hr class="mt-10">
+
+        <p class="text-white mt-4">Copyright <?php echo date('Y'); ?> - Shitware Ltd &middot; <a class="underline" href="https://github.com/shitware-ltd/lmstdfy" target="_blank">View sauce</a></p>
     </div>
 </body>
 </html>
