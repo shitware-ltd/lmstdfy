@@ -104,11 +104,27 @@
         then increment @step
         then put @step into #stepCounter
         then put 'Click this fucking bar' into #stepText
+        then wait 500ms
         then add .active to #thisiswhatasearchbarlookslike
-        then wait 2s then send click to #triggerthesearchthing
+        then wait 250ms
+        then remove .active from #thisiswhatasearchbarlookslike
+        then wait 250ms
+        then add .active to #thisiswhatasearchbarlookslike
+        then wait 250ms
+        then remove .active from #thisiswhatasearchbarlookslike
+        then wait 250ms
+        then add .active to #thisiswhatasearchbarlookslike
+        then wait 250ms
+        then remove .active from #thisiswhatasearchbarlookslike
+        then wait 250ms
+        then add .active to #thisiswhatasearchbarlookslike
+        then wait 250ms
+        then remove .active from #thisiswhatasearchbarlookslike
+        then send click to #triggerthesearchthing
+        then put 'Type what you fucking need in the search bar' into #stepText
         then increment @step
         then put @step into #stepCounter
-        then put 'Type what you fucking need in the search bar' into #stepText
+        then wait 500ms
         <?php
             $searchQuery = @$_GET['q'];
             $searchQueryArray = str_split($searchQuery);
@@ -116,7 +132,7 @@
             foreach ($searchQueryArray as $letter) {
                 $string .= $letter;
         ?>
-        then set #searchbarrrrr's @value to '<?php echo $string; ?>' then wait <?php echo rand(100, 200); ?>ms
+        then set #searchbarrrrr's @value to '<?php echo $string; ?>' then js document.getElementById('searchbarrrrr').setSelectionRange(<?php echo strlen($string); ?>, <?php echo strlen($string); ?>); end then wait <?php echo rand(100, 200); ?>ms
         <?php
             }    
         ?>
