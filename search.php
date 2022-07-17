@@ -128,6 +128,9 @@
     class="language-php h-full w-full font-sans text-gray-900 antialiased"
     >
     <div class="container bg-white p-4" style="z-index:9999;position:sticky;">
+    <h1 class="text-6xl font-bold text-center text-black absolute">
+          <a href="https://lmstdfy.readthedocs.wtf/">LMSTDFY</a>
+        </h1>
         <p class="text-center"><strong>Step <span id="stepCounter">1</span>:</strong> <span id="stepText">Open the Laravel Docs.</a></p>
 </div>
 <style>
