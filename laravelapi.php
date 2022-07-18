@@ -105,7 +105,7 @@ _="
     <h1 class="text-6xl font-bold text-center text-white absolute" style="font-size:24px;">
           <a href="https://lmstdfy.readthedocs.wtf/" class="visited:text-white visited:border-bottom-none" style="border-bottom:0;">LMSTDFY</a>
         </h1>
-        <p class="text-center text-white"><strong>Step <span id="stepCounter">1</span>:</strong> <span id="stepText">Open the PHP website.</a></p>
+        <p class="text-center text-white"><strong>Step <span id="stepCounter">1</span>:</strong> <span id="stepText">Open the Laravel API docs.</a></p>
 </div>
 <style>
     #head-nav {
