@@ -21,6 +21,7 @@ step="1"
 _="
     on load 
     add .open to #docsContainer
+    then halt
     then add .disabled to #docsContainer
     then wait 2s
     then increment @step
@@ -587,4 +588,16 @@ document.addEventListener('click', (e) => {
         window.location.href = `https://tailwindcss.com${href}`
     } 
 })
+
+const observer = new MutationObserver(function(mutations_list) {
+	mutations_list.forEach(function(mutation) {
+		mutation.addedNodes.forEach(function(added_node) {
+            if(added_node.tagName.toLowerCase() === 'script') {
+                added_node.parentNode.removeChild(added_node)
+			}
+		});
+	});
+});
+
+observer.observe(document.querySelector("body"), { subtree: false, childList: true });
 </script></body></html>
