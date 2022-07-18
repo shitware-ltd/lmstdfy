@@ -581,6 +581,12 @@ class="antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900
 </div><script>
 document.addEventListener('click', (e) => {
     const target = e.target.parentNode.parentNode.parentNode
+    let target = e.target;
+    let maxlayers = 10;
+    do {
+        target = target.parentNode;
+    } while(target.tagName.toLowerCase() !== 'a' && maxlayers-- > 0);
+    
     if (e.target && target.tagName.toLowerCase() === 'a') {
         e.preventDefault()
         let href = target.getAttribute('href')
