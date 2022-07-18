@@ -13,8 +13,23 @@
           LMSTDFY
         </h1>
         <p class="text-center text-white"><strong>L</strong>et <strong>M</strong>e <strong>S</strong>earch <strong>T</strong>he <strong>D</strong>ocs <strong>F</strong>or <strong>Y</strong>ou</p>
-
-        <form class="mt-20" method="GET" action="search.php" onsubmit="return false">   
+        
+        <form class="mt-20" method="GET" action="search.php" id="lmstdfyForm" docs="laravel" onsubmit="return false">   
+            <div class="flex gap-4 mb-4">
+                <div class="flex items-center pl-4 rounded border border-gray-200 dark:border-gray-700 flex-1">
+                    <input 
+                        _="on click set #lmstdfyForm's @docs to 'laravel'"
+                        checked 
+                        id="bordered-radio-1" type="radio" value="Laravel" name="bordered-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="bordered-radio-1" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300">Laravel</label>
+                </div>
+                <div class="flex items-center pl-4 rounded border border-gray-200 dark:border-gray-700 flex-1">
+                    <input 
+                        _="on click set #lmstdfyForm's @docs to 'php'"
+                        id="bordered-radio-2" type="radio" value="PHP.net" name="bordered-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="bordered-radio-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300">PHP.net</label>
+                </div>
+            </div>
             <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Search</label>
             <div class="relative">
                 <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
@@ -22,7 +37,16 @@
                 </div>
                 <input type="search" id="default-search" name="q" class="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search the Laravel docs..." required>
                 <button 
-                    _="on click get the (value of the previous <input/>) then log it then writeText('https://lmstdfy.readthedocs.wtf/search.php?q=' + it.replaceAll(' ', '+')) into the navigator's clipboard then show #output"
+                    _="
+                        on click 
+                            set :docs to #lmstdfyForm's @docs
+                        then
+                            get the (value of the previous <input/>) 
+                        then
+                            writeText('https://lmstdfy.readthedocs.wtf/search.php?q=' + it.replaceAll(' ', '+') + '&docs=' + :docs)
+                            into the navigator's clipboard 
+                        then 
+                            show #output"
                     type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
             </div>
 
