@@ -21,7 +21,6 @@ step="1"
 _="
     on load 
     add .open to #docsContainer
-    then halt
     then add .disabled to #docsContainer
     then wait 2s
     then increment @step
