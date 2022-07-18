@@ -57,7 +57,7 @@ _="
         then wait 3s
         then increment @step
         then put @step into #stepCounter
-        then put 'Click this fricking bar' into #stepText
+        then put 'Click this fucking bar' into #stepText
         then wait 500ms
         then add .active to #thisiswhatasearchbarlookslike
         then wait 250ms
@@ -74,7 +74,7 @@ _="
         then add .active to #thisiswhatasearchbarlookslike
         then wait 250ms
         then remove .active from #thisiswhatasearchbarlookslike
-        then put 'Type what you fricking need in the search bar' into #stepText
+        then put 'Type what you fucking need in the search bar' into #stepText
         then increment @step
         then put @step into #stepCounter
         then send focus to #thisiswhatasearchbarlookslike

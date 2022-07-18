@@ -103,7 +103,7 @@
         then wait 3s
         then increment @step
         then put @step into #stepCounter
-        then put 'Click this fricking bar' into #stepText
+        then put 'Click this fucking bar' into #stepText
         then wait 500ms
         then add .active to #thisiswhatasearchbarlookslike
         then wait 250ms
@@ -121,7 +121,7 @@
         then wait 250ms
         then remove .active from #thisiswhatasearchbarlookslike
         then send click to #triggerthesearchthing
-        then put 'Type what you fricking need in the search bar' into #stepText
+        then put 'Type what you fucking need in the search bar' into #stepText
         then increment @step
         then put @step into #stepCounter
         then wait 500ms
@@ -140,7 +140,7 @@
         then send click to #triggerSearch
         then increment @step
         then put @step into #stepCounter
-        then put 'Click what you fricking need' into #stepText
+        then put 'Click what you fucking need' into #stepText
         then remove .disabled from #docsContainer
     "
     class="language-php h-full w-full font-sans text-gray-900 antialiased"

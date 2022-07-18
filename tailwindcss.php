@@ -25,7 +25,7 @@ _="
     then wait 2s
     then increment @step
     then put @step into #stepCounter
-    then put 'Click this fricking bar' into #stepText
+    then put 'Click this fucking bar' into #stepText
     then add .active to #thisiswhatasearchbarlookslike
     then wait 250ms
     then remove .active from #thisiswhatasearchbarlookslike
@@ -42,7 +42,7 @@ _="
     then wait 250ms
     then remove .active from #thisiswhatasearchbarlookslike
     then send click to #thisiswhatasearchbarlookslike
-    then put 'Type what you fricking need in the search bar' into #stepText
+    then put 'Type what you fucking need in the search bar' into #stepText
     then increment @step
     then put @step into #stepCounter
     then send focus to #docsearch-input
@@ -62,7 +62,7 @@ _="
     then send change to #docsearch-input
     then increment @step
     then put @step into #stepCounter
-    then put 'Click what you fricking need' into #stepText
+    then put 'Click what you fucking need' into #stepText
     then remove .disabled from #docsContainer
 "                
 class="antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900">
